@@ -17,9 +17,10 @@ var layers = [
   }),
   new TileLayer({
     source: new TileWMS({
-      url: 'http://localhost:5000/api/wms/GetMap',
+      url: 'https://api.maap.xyz/api/wms/GetMap',
       params: {
-        'LAYERS': 'lvis_collection_level_2',
+        //'LAYERS': 'SC:AFLVIS2.001:138348873',
+        'LAYERS': 'uavsar_AfriSAR_v1_SLC-lopenp_14043_16015_001_160308_L090.vrt',
         'TRANSPARENT': true,
         'VERSION': '1.1.0'  
       }
@@ -37,7 +38,7 @@ var map = new Map({
   target: 'map',
   view: new View({
     projection: 'EPSG:4326',
-    center: [10, 0],
+    center: [10.5, -1],
     zoom: 8
   })
 });
